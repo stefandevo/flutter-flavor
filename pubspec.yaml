@@ -1,7 +1,6 @@
 name: flavor
 description: An easy way to configure flavor settings and displaying flavor banner.
 version: 1.0.0
-author: Stefan de Vogelaere <stefan.de.vogelaere@gmail.com>
 repository: https://github/stefandevo/flutter-flavor
 issue_tracker: https://github/stefandevo/flutter-flavor/issues
 homepage: https://github/stefandevo/flutter-flavor
