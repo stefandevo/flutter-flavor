@@ -1,9 +1,9 @@
 name: flavor
 description: An easy way to configure flavor settings and displaying flavor banner.
 version: 1.0.0
-repository: https://github/stefandevo/flutter-flavor
-issue_tracker: https://github/stefandevo/flutter-flavor/issues
-homepage: https://github/stefandevo/flutter-flavor
+repository: https://github.com/stefandevo/flutter-flavor
+issue_tracker: https://github.com/stefandevo/flutter-flavor/issues
+homepage: https://github.com/stefandevo/flutter-flavor
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
