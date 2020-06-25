@@ -3,7 +3,7 @@ name: build
 on: [push, pull_request]
 
 jobs:
-  test:
+  build:
     #The type of machine to run the job on. [windows,macos, ubuntu , self-hosted]
     runs-on: macos-latest
     #sequence of tasks called
