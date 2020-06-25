@@ -59,13 +59,17 @@ void setupApp() {
 
 ### How does it look?
 
-![DEV](screenshots/flavor_dev.png "DEV") ![BETA](screenshots/flavor_beta.png "BETA") ![PROD](screenshots/flavor_prod.png "PROD")
+|               DEV               |               BETA               |               PROD               |
+| :-----------------------------: | :------------------------------: | :------------------------------: |
+| ![](screenshots/flavor_dev.png) | ![](screenshots/flavor_beta.png) | ![](screenshots/flavor_prod.png) |
+
+**Note** that in the `PROD` flavor no flavor banner is showed.
 
 ### launch.json
 
 In Visual Code you can define following to use the different flavors:
 
-``` json
+``` 
 {
 	"version": "0.2.0",
 	"configurations": [
