@@ -57,12 +57,68 @@ void setupApp() {
 }
 ```
 
+### How does it look?
+
+![DEV](screenshots/flavor_dev.png "DEV") ![BETA](screenshots/flavor_beta.png "BETA") ![PROD](screenshots/flavor_prod.png "PROD")
+
+### launch.json
+
+In Visual Code you can define following to use the different flavors:
+
+``` json
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "DEV",
+			"request": "launch",
+			"type": "dart",
+			"program": "example/lib/main_dev.dart",
+			// "args": [
+			// 	"--flavor",
+			// 	"dev"
+			// ]
+		},
+		{
+			"name": "BETA",
+			"request": "launch",
+			"type": "dart",
+			"program": "example/lib/main_beta.dart",
+			// "args": [
+			// 	"--flavor",
+			// 	"beta"
+			// ]
+		},
+		{
+			"name": "PRD",
+			"request": "launch",
+			"type": "dart",
+			"program": "example/lib/main_prod.dart",
+			// "args": [
+			// 	"--flavor",
+			// 	"prod"
+			// ]
+		},
+	]
+}
+```
+
+**Note**: The `args` keys are currently commented. These only works if you created the flavors in the iOS / Android native projects too.
+
+### Extras
+
 You can also define additional **properties** for each flavor/configuration. This is handy to store url's, api keys, etc.
 Further in your app you can access these values.
 
 ``` dart
 Flavor.I.getString(Keys.apiUrl)
 ```
+
+The package has some default `Keys` at the moment which will be extended over time.
+The defaults:
+`apiUrl`, `apiKey`, `appTitle`
+
+Of course you can add custom keys yourself as showed in the **example**.
 
 Or you can check what flavor is currently running:
 
@@ -72,11 +128,13 @@ if (Flavor.I.isDevelopment) {
 }
 ```
 
-Checkout the **examples** folder for a complete setup.
+Checkout the **example** folder for a complete setup.
 
-**Note**: If you want to change bundle ids, or even assets (icon, splash screen) check out [flutter_flavorizr](https://pub.dev/packages/flutter_flavorizr). This nice tool will help you create flavors in Android and iOS.
+## Flavorize your bundleids and assets
+
+If you want to change bundle ids, or even assets (icon, splash screen) check out [flutter_flavorizr](https://pub.dev/packages/flutter_flavorizr). This nice tool will help you create flavors in Android and iOS.
 
 
+## API Documentation
 
-
-
+API documentation can be found [here](https://pub.dev/documentation/flavor/latest/)

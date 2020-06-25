@@ -29,6 +29,7 @@ class FlavorApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
+        debugShowCheckedModeBanner: false,
         home: HomePage(),
       ),
     );
