@@ -17,14 +17,14 @@ void main() {
       },
     );
 
-    expect(Flavor.I!.getString(Keys.apiUrl), 'https://api.dev.company.com');
-    expect(Flavor.I!.getInt('intValue'), 100);
-    expect(Flavor.I!.getBool('boolValue'), true);
-    expect(Flavor.I!.getDouble('doubleValue'), 1.99);
+    expect(Flavor.I.getString(Keys.apiUrl), 'https://api.dev.company.com');
+    expect(Flavor.I.getInt('intValue'), 100);
+    expect(Flavor.I.getBool('boolValue'), true);
+    expect(Flavor.I.getDouble('doubleValue'), 1.99);
 
-    expect(Flavor.I!.getString('nonExistingKey'), null);
+    expect(Flavor.I.getString('nonExistingKey'), null);
 
-    expect(Flavor.I!.isDevelopment, true);
-    expect(Flavor.I!.isProduction, false);
+    expect(Flavor.I.isDevelopment, true);
+    expect(Flavor.I.isProduction, false);
   });
 }

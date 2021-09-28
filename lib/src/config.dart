@@ -18,10 +18,10 @@ class Flavor {
   static Flavor? _instance;
 
   /// Get the instance of the current flavor configuration
-  static Flavor? get instance => _instance;
+  static Flavor get instance => _instance!;
 
   /// Get the instance of the current flavor configuration (short)
-  static Flavor? get I => _instance;
+  static Flavor get I => _instance!;
 
   Flavor._(this.environment, this.title, this.color, this.properties) {
     _instance = this;
@@ -36,19 +36,27 @@ class Flavor {
   }) : this._(environment, name, color, properties);
 
   /// Try to get the value of the properties as Object
-  Object? getObject(String key) => properties?.containsKey(key) ?? false ? properties![key] as Object? : null;
+  Object? getObject(String key) => properties?.containsKey(key) ?? false
+      ? properties![key] as Object?
+      : null;
 
   /// Try to get the value of the properties as String
-  String? getString(String key) => properties?.containsKey(key) ?? false ? properties![key] as String? : null;
+  String? getString(String key) => properties?.containsKey(key) ?? false
+      ? properties![key] as String?
+      : null;
 
   /// Try to get the value of the properties as int
-  int? getInt(String key) => properties?.containsKey(key) ?? false ? properties![key] as int? : null;
+  int? getInt(String key) =>
+      properties?.containsKey(key) ?? false ? properties![key] as int? : null;
 
   /// Try to get the value of the properties as double
-  double? getDouble(String key) => properties?.containsKey(key) ?? false ? properties![key] as double? : null;
+  double? getDouble(String key) => properties?.containsKey(key) ?? false
+      ? properties![key] as double?
+      : null;
 
   /// Try to get the value of the properties as bool
-  bool? getBool(String key) => properties?.containsKey(key) ?? false ? properties![key] as bool? : null;
+  bool? getBool(String key) =>
+      properties?.containsKey(key) ?? false ? properties![key] as bool? : null;
 
   /// Check if the current flavor is the development flavor
   bool get isDevelopment => environment == Environment.dev;

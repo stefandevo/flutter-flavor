@@ -20,7 +20,7 @@ class FlavorBanner extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final f = Flavor.instance!;
+    final f = Flavor.instance;
     if (f.isProduction) return child;
     return Directionality(
       textDirection: TextDirection.ltr,
