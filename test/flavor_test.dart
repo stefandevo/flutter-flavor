@@ -1,7 +1,6 @@
+import 'package:flavor/flavor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:flavor/flavor.dart';
 
 void main() {
   test('read properties', () {
@@ -18,14 +17,14 @@ void main() {
       },
     );
 
-    expect(Flavor.I.getString(Keys.apiUrl), 'https://api.dev.company.com');
-    expect(Flavor.I.getInt('intValue'), 100);
-    expect(Flavor.I.getBool('boolValue'), true);
-    expect(Flavor.I.getDouble('doubleValue'), 1.99);
+    expect(Flavor.I!.getString(Keys.apiUrl), 'https://api.dev.company.com');
+    expect(Flavor.I!.getInt('intValue'), 100);
+    expect(Flavor.I!.getBool('boolValue'), true);
+    expect(Flavor.I!.getDouble('doubleValue'), 1.99);
 
-    expect(Flavor.I.getString('nonExistingKey'), null);
+    expect(Flavor.I!.getString('nonExistingKey'), null);
 
-    expect(Flavor.I.isDevelopment, true);
-    expect(Flavor.I.isProduction, false);
+    expect(Flavor.I!.isDevelopment, true);
+    expect(Flavor.I!.isProduction, false);
   });
 }

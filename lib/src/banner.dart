@@ -15,18 +15,18 @@ class FlavorBanner extends StatelessWidget {
   ///
   /// The [child] argument must not be null.
   FlavorBanner({
-    this.child,
+    required this.child,
     this.location = BannerLocation.topStart,
   });
   @override
   Widget build(BuildContext context) {
-    final f = Flavor.instance;
+    final f = Flavor.instance!;
     if (f.isProduction) return child;
     return Directionality(
       textDirection: TextDirection.ltr,
       child: Banner(
-        color: f.color,
-        message: f.title,
+        color: f.color!,
+        message: f.title!,
         location: location,
         child: child,
       ),
