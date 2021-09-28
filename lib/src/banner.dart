@@ -15,7 +15,7 @@ class FlavorBanner extends StatelessWidget {
   ///
   /// The [child] argument must not be null.
   FlavorBanner({
-    this.child,
+    required this.child,
     this.location = BannerLocation.topStart,
   });
   @override
@@ -25,8 +25,8 @@ class FlavorBanner extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.ltr,
       child: Banner(
-        color: f.color,
-        message: f.title,
+        color: f.color!,
+        message: f.title!,
         location: location,
         child: child,
       ),

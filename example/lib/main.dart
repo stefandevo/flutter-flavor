@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flavor/flavor.dart';
+import 'package:flutter/material.dart';
 
 /// The launch.json determines what dart file to use as main.
 /// The main_*.dart file configures the flavor and then runs the [setupApp] method to start the app.
